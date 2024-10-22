@@ -8,6 +8,7 @@ export const ORDERS_MOCK: IOrder[] = [
     client_phone: "555-1234",
     products: ["Laptop", "Mouse"],
     status: "DELIVERED",
+    client_image:"p4.png",
   },
   {
     order_id: "O-4517",
@@ -16,6 +17,7 @@ export const ORDERS_MOCK: IOrder[] = [
     client_phone: "555-5678",
     products: ["Smartphone", "Funda"],
     status: "PENDING",
+    client_image:"",
   },
   {
     order_id: "O-4518",
@@ -24,6 +26,7 @@ export const ORDERS_MOCK: IOrder[] = [
     client_phone: "555-8765",
     products: ["Cámara", "Trípode"],
     status: "TRANSPORTING",
+    client_image:"",
   },
   {
     order_id: "O-4519",
@@ -32,6 +35,7 @@ export const ORDERS_MOCK: IOrder[] = [
     client_phone: "555-4321",
     products: ["Tablet"],
     status: "PACKAGING",
+    client_image:"p5.png",
   },
   {
     order_id: "O-4520",
@@ -40,6 +44,7 @@ export const ORDERS_MOCK: IOrder[] = [
     client_phone: "555-6789",
     products: ["Auriculares", "Altavoz"],
     status: "CANCELED",
+    client_image:"",
   },
 ];
 

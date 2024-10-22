@@ -1,6 +1,7 @@
 export * from "./Logo/Logo";
 export * from "./Sidebar/Sidebar";
 export * from "./filters/Filters";
+export * from "./user-view/UserView";
 export * from "./section-title/Title";
 export * from "./filters/ViewResults";
 export * from "./filters/FilterStatus";

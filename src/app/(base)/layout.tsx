@@ -15,8 +15,8 @@ export default function RootLayout({
 
       <section className="flex-1 min-h-screen px-4 bg-white flex flex-col">
         <Navbar />
-        <section className="flex-1">{children}</section>
-        <Footer classes="mb-2"/>
+        <section className="flex-1 rounded-tl-[50px]  bg-[#F9FAFB] overflow-hidden">{children}</section>
+        <Footer classes="mb-2  bg-[#F9FAFB]"/>
       </section>
     </div>
   );

@@ -1,10 +1,9 @@
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 import { ButtonSpecial, Card } from "@/components/ui";
-import { Badge } from "@/components/ui/badge";
 import { Title } from "../section-title/Title";
 import { ORDER_ASSIGNMENTS } from "@/lib/constants";
+import { UserView } from "../user-view/UserView";
 
 interface Props {
   classes?: string;
@@ -16,24 +15,18 @@ export const Assignments = ({ classes }: Props) => {
       <Title title="Assignments" subtitle="Assignments to messengers" />
 
       <div className="flex-1 mt-4 space-y-1">
-        {ORDER_ASSIGNMENTS.map(({ image, label, value }, index) => (
-          <div
-            key={index}
-            className={cn("flex justify-between items-center p-2.5 ", {
-              "bg-[#EDF2F7]": index % 2 === 0,
-            })}
-          >
-            <div className="flex items-center gap-2">
-              <div className="rounded-full overflow-hidden">
-                <Image src={`/images/${image}`} alt="" width={24} height={24} />
-              </div>
-              <span className="text-[#4A5568] text-[12px]">{label}</span>
-            </div>
-            <Badge className="bg-[#FF7500] text-white w-6 h-6 rounded-full hover:bg-[#FF7500]">
-              {value}
-            </Badge>
-          </div>
-        ))}
+        {ORDER_ASSIGNMENTS.map(({ image, label, value }, index) => {
+          const strippedClass = index % 2 === 0 ? "bg-[#EDF2F7]" : " ";
+          return (
+            <UserView
+              key={index}
+              image={image}
+              label={label}
+              value={value}
+              classes={strippedClass}
+            />
+          );
+        })}
       </div>
 
       <ButtonSpecial label="Assign All" classes="w-full px-4" />
