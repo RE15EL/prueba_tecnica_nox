@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui";
+import { ButtonSpecial, Card } from "@/components/ui";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ORDER_ASSIGNMENTS } from "@/lib/constants";
@@ -13,8 +13,8 @@ interface Props {
 export const Assignments = ({ classes }: Props) => {
   return (
     <Card classes={cn("flex flex-col", classes)}>
-      <Title title="Assignments" subtitle="Assignments to messengers"/>
-      
+      <Title title="Assignments" subtitle="Assignments to messengers" />
+
       <div className="flex-1 mt-4 space-y-1">
         {ORDER_ASSIGNMENTS.map(({ image, label, value }, index) => (
           <div
@@ -36,7 +36,7 @@ export const Assignments = ({ classes }: Props) => {
         ))}
       </div>
 
-      <Button variant="warning" className="w-full px-4 rounded-[16px]"> Assign All</Button>
+      <ButtonSpecial label="Assign All" classes="w-full px-4" />
     </Card>
   );
 };
