@@ -3,6 +3,8 @@ export * from "./Sidebar/Sidebar";
 export * from "./filters/Filters";
 export * from "./filters/ViewResults";
 export * from "./filters/FilterStatus";
+export * from "./assignments/Assignments";
+export * from "./order-summary/OrdeSummary";
 export * from "./sidebar-menu/SidebarMenu";
 export * from "./nomencaltors/Nomencaltors";
 export * from "./navbar-actions/NavbarActions";
