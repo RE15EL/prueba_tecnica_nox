@@ -1,4 +1,5 @@
 import { Sidebar } from "@/components/shared-components";
+import { Footer } from "@/components/ui/footer/Footer";
 import { Navbar } from "@/components/ui/navbar/Navbar";
 
 export default function RootLayout({
@@ -8,13 +9,14 @@ export default function RootLayout({
 }>) {
   return (
     <div className="min-h-screen flex ">
-      <section className="">
+      <section>
         <Sidebar />
       </section>
 
-      <section className=" flex-1">
+      <section className="flex-1 min-h-screen px-4 bg-white border flex flex-col">
         <Navbar />
-        {children}
+        <section className="flex-1">{children}</section>
+        <Footer />
       </section>
     </div>
   );
