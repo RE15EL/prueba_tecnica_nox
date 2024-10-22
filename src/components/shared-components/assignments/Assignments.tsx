@@ -1,10 +1,10 @@
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+
 import { ButtonSpecial, Card } from "@/components/ui";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ORDER_ASSIGNMENTS } from "@/lib/constants";
-import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { Title } from "../section-title/Title";
+import { ORDER_ASSIGNMENTS } from "@/lib/constants";
 
 interface Props {
   classes?: string;
