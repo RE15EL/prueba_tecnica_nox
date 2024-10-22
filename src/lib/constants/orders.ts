@@ -1,22 +1,12 @@
 import { IOrdersAssignment } from "@/types";
 
-export const ORDER_STATUS = [
-  {
-    label: "ALL STATUS",
-  },
-  {
-    label: "TRANSPORTING",
-  },
-  {
-    label: "PACKAGING",
-  },
-  {
-    label: "DELIVERED",
-  },
-  {
-    label: "CANCELED",
-  },
-];
+export type ORDER_STATUS =
+  | "ALL STATUS"
+  | "TRANSPORTING"
+  | "PACKAGING"
+  | "DELIVERED"
+  | "PENDING"
+  | "CANCELED";
 
 export const ORDER_ASSIGNMENTS: IOrdersAssignment[] = [
   {
@@ -35,3 +25,5 @@ export const ORDER_ASSIGNMENTS: IOrdersAssignment[] = [
     value: 1,
   },
 ];
+
+
