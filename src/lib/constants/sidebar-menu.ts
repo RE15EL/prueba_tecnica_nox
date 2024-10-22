@@ -60,4 +60,12 @@ export const SIDEBAR_MENU_NOMENCLATORS_ITEMS: ISidebarNomenclatorItem[] = [
     title: "Categories",
     subitems: [],
   },
+  {
+    title: "Products",
+    subitems: [],
+  },
+  {
+    title: "Order Status",
+    subitems: [],
+  },
 ];
