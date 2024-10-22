@@ -13,7 +13,7 @@ export default function RootLayout({
         <Sidebar />
       </section>
 
-      <section className="flex-1 min-h-screen px-4 bg-white border flex flex-col">
+      <section className="flex-1 min-h-screen px-4 bg-white flex flex-col">
         <Navbar />
         <section className="flex-1">{children}</section>
         <Footer classes="mb-2"/>
