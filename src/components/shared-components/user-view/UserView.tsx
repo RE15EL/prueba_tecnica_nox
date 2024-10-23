@@ -15,8 +15,14 @@ export const UserView = ({ image, label, value, classes }: Props) => {
     <div className={cn("flex justify-between items-center p-2.5", classes)}>
       <div className="flex items-center gap-2">
         {image && (
-          <div className="rounded-full overflow-hidden">
-            <Image src={`/images/${image}`} alt={`image ${image}`} width={24} height={24}/>
+          <div className="rounded-full overflow-hidden w-8">
+            <Image
+              src={`/images/${image}`}
+              alt={`image ${image}`}
+              width={24}
+              height={24}
+              className="w-full object-cover"
+            />
           </div>
         )}
         <span className="text-[#4A5568] text-[12px]">{label}</span>

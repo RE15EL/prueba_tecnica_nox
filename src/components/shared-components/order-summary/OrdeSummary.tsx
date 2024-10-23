@@ -22,12 +22,15 @@ export const OrdeSummary = ({ classes }: Props) => {
     {
       accessorKey: "client_name",
       header: "NAME",
-      cell: ({row})=>{
+      cell: ({ row }) => {
         const rowData = row.original;
         return (
-          <UserView image={rowData.client_image ? rowData.client_image : 'p_unk.png'} label={rowData.client_name}/>
-        )
-      }
+          <UserView
+            image={rowData.client_image ? rowData.client_image : "p_unk.png"}
+            label={rowData.client_name}
+          />
+        );
+      },
     },
     {
       accessorKey: "products",
@@ -81,8 +84,15 @@ export const OrdeSummary = ({ classes }: Props) => {
   ];
   return (
     <Card classes={cn("flex flex-col", classes)}>
-      <Title title="Orders" subtitle="Order Summary" />
-      <DataTable data={ORDERS_MOCK} columns={columns} />
+      <div className="space-y-4">
+        <Title title="Orders" subtitle="Order Summary" />
+        <DataTable
+          data={ORDERS_MOCK}
+          columns={columns}
+          paginationBot
+          paginationTop
+        />
+      </div>
     </Card>
   );
 };

@@ -6,7 +6,7 @@ import { Nomencaltors } from "../nomencaltors/Nomencaltors";
 export const SidebarMenu = () => {
   return (
     <div className="">
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 w-full">
         {SIDEBAR_MENU_NAV_ITEMS.map((item) => (
           <SidebarMenuItem item={item} key={item.title} />
         ))}

@@ -9,14 +9,14 @@ export default function RootLayout({
 }>) {
   return (
     <div className="min-h-screen flex ">
-      <section>
+      <section className="border w-20 md:w-64">
         <Sidebar />
       </section>
 
-      <section className="flex-1 min-h-screen px-4 bg-white flex flex-col">
+      <section className="flex-1 min-h-screen px-2 md:px-4 bg-white flex flex-col">
         <Navbar />
-        <section className="flex-1 rounded-tl-[50px]  bg-[#F9FAFB] overflow-hidden">{children}</section>
-        <Footer classes="mb-2  bg-[#F9FAFB]"/>
+        <section className="flex-1 rounded-tl-[50px] bg-[#F9FAFB] overflow-hidden">{children}</section>
+        <Footer classes="mb-2 bg-[#F9FAFB]"/>
       </section>
     </div>
   );

@@ -3,7 +3,7 @@ import { BreadcrumbWithCustomSeparator } from "../breadcrumb-custom-separator/Br
 
 export const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center w-full px-5 py-4 bg-white">
+    <nav className="hidden md:flex justify-between items-center w-full px-5 py-4 bg-white">
       <BreadcrumbWithCustomSeparator />
       
       <div className="flex items-center gap-2">

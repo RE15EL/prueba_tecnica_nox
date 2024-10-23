@@ -10,6 +10,7 @@ export const Logo = () => {
         alt="Logo"
         height={150}
         width={150}
+        className="object-contain"
       />
     </Link>
   );

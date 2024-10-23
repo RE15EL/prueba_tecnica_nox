@@ -2,8 +2,11 @@
 
 import {
   ColumnDef,
+  ColumnFiltersState,
   flexRender,
   getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
   useReactTable,
 } from "@tanstack/react-table";
 
@@ -16,24 +19,45 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { cn } from "@/lib/utils";
+import { DataTablePagination } from "../data-table-pagination/DataTablePagination";
+import { useState } from "react";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  paginationTop: boolean;
+  paginationBot: boolean;
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
+  paginationTop = false,
+  paginationBot = false,
 }: DataTableProps<TData, TValue>) {
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
+    state: {
+      columnFilters,
+    },
   });
 
   return (
-    <div className="rounded-md ">
+    <div className="rounded-md space-y-3">
+      {paginationTop && (
+        <DataTablePagination
+          table={table}
+          paginationTop
+          paginationBot={false}
+        />
+      )}
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (
@@ -77,6 +101,13 @@ export function DataTable<TData, TValue>({
           )}
         </TableBody>
       </Table>
+      {paginationBot && (
+        <DataTablePagination
+          table={table}
+          paginationBot
+          paginationTop={false}
+        />
+      )}
     </div>
   );
 }
