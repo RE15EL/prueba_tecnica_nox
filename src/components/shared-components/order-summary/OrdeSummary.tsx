@@ -102,7 +102,9 @@ export const OrdeSummary = ({ classes }: Props) => {
             paginationTop
           />
         ) : (
-          <div> <RenderMap/></div>
+          <div>
+            <RenderMap />
+          </div>
         )}
       </div>
     </Card>
