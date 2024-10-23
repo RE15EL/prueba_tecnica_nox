@@ -25,7 +25,7 @@ export const SidebarMenuItem = ({ item }: Props) => {
     <Link
       href={item.href}
       className={cn(
-        "w-[229px] py-2 md:py-4 md:px-6 bg-transparent rounded-[16px] font-bold text-[#A0AEC0] transition-all hover:text-[#FF7500] hover:bg-[#FFF9EC] flex items-center md:gap-4",
+        "max-w-[229px] py-2 md:py-4 px-2 md:px-6 bg-transparent rounded-[16px] font-bold text-[#A0AEC0] transition-all hover:text-[#FF7500] hover:bg-[#FFF9EC] flex items-center md:gap-4",
         {
           "text-[#FF7500] bg-[#FFF9EC]": pathname.startsWith(`/${item.href}`),
         }

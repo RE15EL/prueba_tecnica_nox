@@ -11,6 +11,7 @@ export * from "./order-status/OrderStatus";
 export * from "./sidebar-menu/SidebarMenu";
 export * from "./nomencaltors/Nomencaltors";
 export * from "./order-summary/OrdeSummary";
+export * from "./search-client/SearchClient";
 export * from "./format-status/FormatStatus";
 export * from "./navbar-actions/NavbarActions";
 export * from "./order-products/OrderProducts";

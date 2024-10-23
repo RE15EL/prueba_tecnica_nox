@@ -5,7 +5,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
+  // BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { usePathname } from "next/navigation";
@@ -22,12 +22,12 @@ export const BreadcrumbWithCustomSeparator = () => {
         </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
-          <BreadcrumbLink href="/orders">Orders</BreadcrumbLink>
+          <BreadcrumbLink href="/orders/orders">Orders</BreadcrumbLink>
         </BreadcrumbItem>
         <BreadcrumbSeparator />
-        <BreadcrumbItem>
+        {/* <BreadcrumbItem>
           <BreadcrumbPage>Summary</BreadcrumbPage>
-        </BreadcrumbItem>
+        </BreadcrumbItem> */}
       </BreadcrumbList>
     </Breadcrumb>
   );

@@ -1,4 +1,4 @@
-import { NavbarActions } from "@/components/shared-components";
+import { NavbarActions, SearchClient } from "@/components/shared-components";
 import { BreadcrumbWithCustomSeparator } from "../breadcrumb-custom-separator/BreadcrumbWithCustomSeparator";
 
 export const Navbar = () => {
@@ -7,6 +7,7 @@ export const Navbar = () => {
       <BreadcrumbWithCustomSeparator />
       
       <div className="flex items-center gap-2">
+        <SearchClient/>
         <NavbarActions />
       </div>
     </nav>
