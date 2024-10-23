@@ -13,6 +13,7 @@ export * from "./nomenclators/Nomenclators";
 export * from "./order-summary/OrdeSummary";
 export * from "./search-client/SearchClient";
 export * from "./format-status/FormatStatus";
+export * from "./filter-by-date/FilterByDate";
 export * from "./navbar-actions/NavbarActions";
 export * from "./order-products/OrderProducts";
 export * from "./sidebar-menu-item/SidebarMenuItem";

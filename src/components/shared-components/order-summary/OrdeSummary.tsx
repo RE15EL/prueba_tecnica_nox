@@ -8,6 +8,7 @@ import { ColumnDef } from "@tanstack/react-table";
 import { IOrder } from "@/types";
 import { FormatStatus } from "../format-status/FormatStatus";
 import { UserView } from "../user-view/UserView";
+import { FilterByDate } from "../filter-by-date/FilterByDate";
 
 interface Props {
   classes?: string;
@@ -85,7 +86,10 @@ export const OrdeSummary = ({ classes }: Props) => {
   return (
     <Card classes={cn("flex flex-col", classes)}>
       <div className="space-y-4">
-        <Title title="Orders" subtitle="Order Summary" />
+        <section className="flex justify-between items-center">
+          <Title title="Orders" subtitle="Order Summary" />
+          <FilterByDate />
+        </section>
         <DataTable
           data={ORDERS_MOCK}
           columns={columns}
