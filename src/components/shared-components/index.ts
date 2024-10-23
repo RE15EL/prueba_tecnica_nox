@@ -16,5 +16,6 @@ export * from "./format-status/FormatStatus";
 export * from "./filter-by-date/FilterByDate";
 export * from "./navbar-actions/NavbarActions";
 export * from "./order-products/OrderProducts";
+export * from "./create-order-form/CreateOrderForm";
 export * from "./sidebar-menu-item/SidebarMenuItem";
 export * from "./order-shipping-address/OrderShippingAddress";
