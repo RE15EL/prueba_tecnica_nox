@@ -10,6 +10,7 @@ import { FormatStatus } from "../format-status/FormatStatus";
 import { UserView } from "../user-view/UserView";
 import { FilterByDate } from "../filter-by-date/FilterByDate";
 import { useOrdersStore } from "@/store";
+import { RenderMap } from "../render-map/RenderMap";
 
 interface Props {
   classes?: string;
@@ -101,7 +102,7 @@ export const OrdeSummary = ({ classes }: Props) => {
             paginationTop
           />
         ) : (
-          <div> Hola mapa</div>
+          <div> <RenderMap/></div>
         )}
       </div>
     </Card>
