@@ -20,3 +20,5 @@ export type IOrderStatus = {
   date: string;
   status: ORDER_STATUS;
 };
+
+export type OrderViewType = "list" | "map"

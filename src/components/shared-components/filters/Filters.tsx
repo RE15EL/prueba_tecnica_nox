@@ -7,6 +7,7 @@ interface Props {
 }
 
 export const Filters = ({ classes }: Props) => {
+  
   return (
     <div
       className={cn("w-full flex flex-row-reverse items-center gap-5", classes)}

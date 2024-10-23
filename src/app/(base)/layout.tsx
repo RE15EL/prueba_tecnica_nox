@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <div className="min-h-screen flex ">
-      <section className="border w-20 md:w-64">
+      <section className="w-20 md:w-64">
         <Sidebar />
       </section>
 

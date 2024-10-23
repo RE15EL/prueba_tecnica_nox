@@ -9,12 +9,14 @@ import { IOrder } from "@/types";
 import { FormatStatus } from "../format-status/FormatStatus";
 import { UserView } from "../user-view/UserView";
 import { FilterByDate } from "../filter-by-date/FilterByDate";
+import { useOrdersStore } from "@/store";
 
 interface Props {
   classes?: string;
 }
 
 export const OrdeSummary = ({ classes }: Props) => {
+  const view = useOrdersStore((state) => state.view);
   const columns: ColumnDef<IOrder>[] = [
     {
       accessorKey: "order_id",
@@ -83,6 +85,7 @@ export const OrdeSummary = ({ classes }: Props) => {
       },
     },
   ];
+
   return (
     <Card classes={cn("flex flex-col", classes)}>
       <div className="space-y-4">
@@ -90,12 +93,16 @@ export const OrdeSummary = ({ classes }: Props) => {
           <Title title="Orders" subtitle="Order Summary" />
           <FilterByDate />
         </section>
-        <DataTable
-          data={ORDERS_MOCK}
-          columns={columns}
-          paginationBot
-          paginationTop
-        />
+        {view === "list" ? (
+          <DataTable
+            data={ORDERS_MOCK}
+            columns={columns}
+            paginationBot
+            paginationTop
+          />
+        ) : (
+          <div> Hola mapa</div>
+        )}
       </div>
     </Card>
   );
