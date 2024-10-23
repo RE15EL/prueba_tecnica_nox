@@ -9,7 +9,7 @@ export * from "./order-user/OrderUser";
 export * from "./assignments/Assignments";
 export * from "./order-status/OrderStatus";
 export * from "./sidebar-menu/SidebarMenu";
-export * from "./nomencaltors/Nomencaltors";
+export * from "./nomenclators/Nomenclators";
 export * from "./order-summary/OrdeSummary";
 export * from "./search-client/SearchClient";
 export * from "./format-status/FormatStatus";

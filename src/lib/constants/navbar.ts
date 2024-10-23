@@ -7,8 +7,8 @@ export const NAVBAR_ACTIONS_ITEMS = [
     title: "settings",
     image: "settings.png",
   },
-  {
-    title: "profile",
-    image: "profile.png",
-  },
+  // {
+  //   title: "profile",
+  //   image: "profile.png",
+  // },
 ];

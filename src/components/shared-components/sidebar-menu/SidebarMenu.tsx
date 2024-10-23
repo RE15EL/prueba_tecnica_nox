@@ -1,7 +1,7 @@
 import { Separator } from "@/components/ui/separator";
 import { SidebarMenuItem } from "../sidebar-menu-item/SidebarMenuItem";
 import { SIDEBAR_MENU_NAV_ITEMS } from "@/lib/constants";
-import { Nomencaltors } from "../nomencaltors/Nomencaltors";
+import { Nomencaltors } from "../nomenclators/Nomenclators";
 
 export const SidebarMenu = () => {
   return (
