@@ -3,7 +3,6 @@
 import { cn } from "@/lib/utils";
 import { Title } from "../section-title/Title";
 import { ButtonSpecial, Card } from "@/components/ui";
-import { Button } from "@/components/ui/button";
 import { DataTable } from "@/components/ui/data-table/DataTable";
 import { ColumnDef } from "@tanstack/react-table";
 import { FormatStatus } from "../format-status/FormatStatus";
@@ -32,7 +31,7 @@ export const OrderStatus = ({ classes }: Props) => {
 
   return (
     <div className={cn(classes)}>
-      <Card classes={cn("flex flex-col gap-4", classes)}>
+      <Card classes={cn("flex flex-col pb-14", classes)}>
         <div className="size-full flex justify-between items-center mb-4">
           <Title title="Status" subtitle="Status Orders" />
           <ButtonSpecial label="Change Status" />
