@@ -10,7 +10,7 @@ interface Props {
 export const OrderUser = ({ classes }: Props) => {
   return (
     <div className={cn(classes)}>
-      <Card classes={cn("flex flex-col", classes)}>
+      <Card classes={cn("flex flex-col gap-4", classes)}>
         <Title title="Order User" subtitle="User creating the order" />
         <CreateOrderForm/>
       </Card>

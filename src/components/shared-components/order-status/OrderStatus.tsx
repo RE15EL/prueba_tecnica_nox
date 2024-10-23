@@ -32,12 +32,17 @@ export const OrderStatus = ({ classes }: Props) => {
 
   return (
     <div className={cn(classes)}>
-      <Card classes={cn("flex flex-col ", classes)}>
+      <Card classes={cn("flex flex-col gap-4", classes)}>
         <div className="size-full flex justify-between items-center mb-4">
           <Title title="Status" subtitle="Status Orders" />
-          <ButtonSpecial label="Change Status"/>
+          <ButtonSpecial label="Change Status" />
         </div>
-        <DataTable data={ORDER_STATUS_MOCK} columns={columns} />
+        <DataTable
+          data={ORDER_STATUS_MOCK}
+          columns={columns}
+          paginationTop={false}
+          paginationBot={false}
+        />
       </Card>
     </div>
   );

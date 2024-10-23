@@ -18,4 +18,5 @@ export * from "./navbar-actions/NavbarActions";
 export * from "./order-products/OrderProducts";
 export * from "./create-order-form/CreateOrderForm";
 export * from "./sidebar-menu-item/SidebarMenuItem";
+export * from "./order-detail-products/OrderDetailProducts";
 export * from "./order-shipping-address/OrderShippingAddress";
