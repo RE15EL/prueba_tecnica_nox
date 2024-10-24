@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 
 import { useRouter } from "next/navigation";
 import { AssignToMessenger } from "../assign-to-messenger/AssignToMessenger";
+import { inter } from "@/config/fonts";
 
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
@@ -125,7 +126,7 @@ const Map = () => {
             title={marker.info.orderId}
           >
             <Popup>
-              <p className="text-[14px] text-gray-300 font-normal">
+              <p className={`text-[14px] text-gray-300 font-normal ${inter.className} antialiased`}>
                 {marker.info.address}
               </p>
               <p className="text-[14px] text-[#2D3748]">{marker.info.place}</p>

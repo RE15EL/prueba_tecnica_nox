@@ -41,6 +41,7 @@ export const AssignToMessenger = ({ open, setOpen }: Props) => {
   const onSubmit = ({ messenger }: z.infer<typeof FormSchema>) => {
     console.log({ messenger });
   };
+
   return (
     <Modal
       open={open}
@@ -49,7 +50,9 @@ export const AssignToMessenger = ({ open, setOpen }: Props) => {
       classes="max-w-md"
     >
       <div className="space-y-4">
-        <p className={`w-full text-[16px] text-[#2D3748] ${lato.className} antialiased`}>
+        <p
+          className={`w-full text-[16px] text-[#2D3748] ${lato.className} antialiased`}
+        >
           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
@@ -103,6 +106,7 @@ export const AssignToMessenger = ({ open, setOpen }: Props) => {
                 </Button>
                 <Button
                   type="button"
+                  onClick={() => setOpen(false)}
                   className="px-6 rounded-[6px] w-[80px] bg-[#EDF2F7] text-[#2D3748] hover:bg-[#2D3748] hover:text-[#EDF2F7]"
                 >
                   Cancel
