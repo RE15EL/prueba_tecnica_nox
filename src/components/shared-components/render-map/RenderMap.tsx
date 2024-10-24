@@ -1,3 +1,5 @@
+"use client";
+
 import Map from "../map/map";
 
 export const RenderMap = () => {
