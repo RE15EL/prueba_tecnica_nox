@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 import {
   Dialog,
   DialogContent,
@@ -13,11 +13,11 @@ interface Props {
   children: ReactNode;
   title: string;
   desc?: string;
+  open: boolean;
+  setOpen: Dispatch<SetStateAction<boolean>>;
 }
 
-export const Modal = ({ title, desc, children }: Props) => {
-  const [open, setOpen] = useState(false);
-
+export const Modal = ({ title, desc, children, open, setOpen }: Props) => {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
