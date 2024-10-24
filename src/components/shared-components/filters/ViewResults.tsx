@@ -1,8 +1,9 @@
 "use client";
 
+import { ViewMapIcon } from "@/components/ui";
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { useOrdersStore } from "@/store";
-import { DrawingPinFilledIcon, HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
 
 export const ViewResults = () => {
@@ -15,12 +16,12 @@ export const ViewResults = () => {
     setViewOrders(view);
   }, [view]);
 
-  const handleToggle = (newView:string) => {
+  const handleToggle = (newView: string) => {
     if (newView) setView(newView);
   };
 
   return (
-    <div className="h-[54px] w-[116px] flex justify-center items-center gap-0">
+    <div className="h-[48px] w-[112px] flex justify-center items-center gap-0">
       <ToggleGroup
         type="single"
         className="size-full p-0 border-[#EDF2F7] overflow-hidden"
@@ -42,7 +43,7 @@ export const ViewResults = () => {
           aria-label="Toggle vie to map"
           className="size-full border-[#E2E8F0] rounded-e-[16px]"
         >
-          <DrawingPinFilledIcon className="h-5 w-5" />
+          <ViewMapIcon />
         </ToggleGroupItem>
       </ToggleGroup>
     </div>
