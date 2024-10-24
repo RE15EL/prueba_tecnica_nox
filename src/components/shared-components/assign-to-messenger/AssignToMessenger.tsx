@@ -40,6 +40,7 @@ export const AssignToMessenger = ({ open, setOpen }: Props) => {
 
   const onSubmit = ({ messenger }: z.infer<typeof FormSchema>) => {
     console.log({ messenger });
+    setOpen(false);
   };
 
   return (
