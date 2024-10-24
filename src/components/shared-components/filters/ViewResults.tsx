@@ -1,10 +1,10 @@
 "use client";
 
-import { ViewMapIcon } from "@/components/ui";
-import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
-import { useOrdersStore } from "@/store";
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { useEffect, useState } from "react";
+import { useOrdersStore } from "@/store";
+import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
+import { IoListOutline } from "react-icons/io5";
+import { PiMapPinSimpleAreaBold } from "react-icons/pi";
 
 export const ViewResults = () => {
   const view = useOrdersStore((state) => state.view);
@@ -34,7 +34,7 @@ export const ViewResults = () => {
           aria-label="Toggle view to list"
           className="size-full border-[#E2E8F0] rounded-s-[16px] hover:bg-[#EDF2F7]"
         >
-          <HamburgerMenuIcon className="h-5 w-5" />
+          <IoListOutline className="h-5 w-5" />
         </ToggleGroupItem>
 
         <ToggleGroupItem
@@ -43,7 +43,7 @@ export const ViewResults = () => {
           aria-label="Toggle vie to map"
           className="size-full border-[#E2E8F0] rounded-e-[16px]"
         >
-          <ViewMapIcon />
+          <PiMapPinSimpleAreaBold className="h-5 w-5" />
         </ToggleGroupItem>
       </ToggleGroup>
     </div>

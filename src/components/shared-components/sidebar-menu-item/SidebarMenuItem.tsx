@@ -5,14 +5,17 @@ import { usePathname } from "next/navigation";
 
 import { cn } from "@/lib/utils";
 import { ISidebarMenuItem } from "@/types";
+import { RxDashboard } from "react-icons/rx";
 import {
-  BackpackIcon,
-  BellIcon,
-  DashboardIcon,
-  FileTextIcon,
-  ImageIcon,
-  MixIcon,
-} from "@radix-ui/react-icons";
+  IoDocumentTextOutline,
+  IoBookOutline,
+  IoGameControllerOutline,
+  IoFileTrayStackedOutline,
+  IoGiftOutline,
+} from "react-icons/io5";
+import { FiImage } from "react-icons/fi";
+import { IoIosNotificationsOutline } from "react-icons/io";
+import { MdOutlineLocalShipping } from "react-icons/md";
 
 interface Props {
   item: ISidebarMenuItem;
@@ -31,16 +34,32 @@ export const SidebarMenuItem = ({ item }: Props) => {
         }
       )}
     >
-      {item.icon === 'dashboard' &&<DashboardIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'orders' &&<FileTextIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'image' &&<ImageIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'info' &&<ImageIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'notifications' &&<BellIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'game' &&<MixIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'inventaries' &&<MixIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'coupons' &&<BackpackIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      {item.icon === 'shippings' &&<BackpackIcon className="h-5 w-5 ml-3 md:ml-0"/>}
-      
+      {item.icon === "dashboard" && (
+        <RxDashboard className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "orders" && (
+        <IoDocumentTextOutline className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "image" && <FiImage className="h-5 w-5 ml-3 md:ml-0" />}
+      {item.icon === "info" && (
+        <IoBookOutline className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "notifications" && (
+        <IoIosNotificationsOutline className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "game" && (
+        <IoGameControllerOutline className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "inventaries" && (
+        <IoFileTrayStackedOutline className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "coupons" && (
+        <IoGiftOutline className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+      {item.icon === "shippings" && (
+        <MdOutlineLocalShipping className="h-5 w-5 ml-3 md:ml-0" />
+      )}
+
       <span className="hidden md:block"> {item.title}</span>
     </Link>
   );
