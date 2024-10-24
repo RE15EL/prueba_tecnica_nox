@@ -46,7 +46,6 @@ export const FilterByDate = () => {
             onSelect={(val) =>
               setDate((prev) => ({ ...prev, init: val as Date }))
             }
-            initialFocus
           />
         </PopoverContent>
       </Popover>
@@ -71,7 +70,6 @@ export const FilterByDate = () => {
             onSelect={(val) =>
               setDate((prev) => ({ ...prev, end: val as Date }))
             }
-            initialFocus
           />
         </PopoverContent>
       </Popover>
