@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
-import { ButtonSpecial, Modal } from "@/components/ui";
+import { ButtonSpecial } from "@/components/ui";
 import { Button } from "@/components/ui/button";
 
+
 import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
+import { AssignToMessenger } from "../assign-to-messenger/AssignToMessenger";
 
 const MapContainer = dynamic(
   () => import("react-leaflet").then((mod) => mod.MapContainer),
@@ -36,7 +37,7 @@ const customIcon = L.icon({
 const Map = () => {
   const router = useRouter();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  // const [selectedMarker, setSelectedMarker] = useState<string | null>(null);
+  
 
   const markers = [
     {
@@ -93,17 +94,6 @@ const Map = () => {
     };
   }, []);
 
-  // const openModal = (info: string) => {
-  //   console.log({ info });
-  //   setSelectedMarker(info);
-  //   setModalIsOpen(true);
-  // };
-
-  // const closeModal = () => {
-  //   setModalIsOpen(false);
-  //   setSelectedMarker(null);
-  // };
-
   const handleViewDetails = () => {
     console.log("View Details");
     router.push("/orders/details");
@@ -112,7 +102,7 @@ const Map = () => {
 
   const handleAssign = () => {
     console.log("Assign");
-    // closeModal();
+    setModalIsOpen(true);
   };
 
   return (
@@ -135,7 +125,9 @@ const Map = () => {
             title={marker.info.orderId}
           >
             <Popup>
-              <p className="text-[14px] text-gray-300 font-normal">{marker.info.address}</p>
+              <p className="text-[14px] text-gray-300 font-normal">
+                {marker.info.address}
+              </p>
               <p className="text-[14px] text-[#2D3748]">{marker.info.place}</p>
               <div className="flex justify-center items-center gap-2.5">
                 <Button
@@ -155,19 +147,7 @@ const Map = () => {
         ))}
       </MapContainer>
 
-      <Modal
-        open={modalIsOpen}
-        setOpen={setModalIsOpen}
-        title="Assign To Messenger"
-      >
-        <p className="text-[16px] text-[#2D3748]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur
-          assumenda fugiat autem sit! Ipsam rem quisquam optio, aspernatur amet
-          explicabo.
-        </p>
-        <p>Messanger<span className="text-red-500">*</span></p>
-        <Input className="text-[#2D3748] text-[16px]" placeholder="Pedro Cruz Dominguez" />
-      </Modal>
+      <AssignToMessenger open={modalIsOpen} setOpen={setModalIsOpen}/>
     </>
   );
 };
