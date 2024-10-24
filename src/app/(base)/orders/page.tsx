@@ -12,7 +12,7 @@ const OrdersPage = () => {
           Summary
         </Link>
         <Link
-          href="/orders/details"
+          href="/orders/details/0-4517"
           className="hover:cursor-pointer w-40 h-20 rounded-[16px] text-slate-500 bg-slate-200 border border-slate-300 grid place-items-center"
         >
           Details

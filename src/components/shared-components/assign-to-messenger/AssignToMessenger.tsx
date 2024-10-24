@@ -100,14 +100,14 @@ export const AssignToMessenger = ({ open, setOpen }: Props) => {
                 <Button
                   variant="warning"
                   type="submit"
-                  className="px-6 rounded-[6px] w-[80px]"
+                  className="px-8 rounded-[6px] w-[80px]"
                 >
                   Assign To
                 </Button>
                 <Button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="px-6 rounded-[6px] w-[80px] bg-[#EDF2F7] text-[#2D3748] hover:bg-[#2D3748] hover:text-[#EDF2F7]"
+                  className="px-8 rounded-[6px] w-[80px] bg-[#EDF2F7] text-[#2D3748] hover:bg-[#EDF2F7] hover:bg-opacity-30"
                 >
                   Cancel
                 </Button>

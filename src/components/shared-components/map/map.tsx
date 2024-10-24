@@ -7,7 +7,6 @@ import L from "leaflet";
 import { ButtonSpecial } from "@/components/ui";
 import { Button } from "@/components/ui/button";
 
-
 import { useRouter } from "next/navigation";
 import { AssignToMessenger } from "../assign-to-messenger/AssignToMessenger";
 import { inter } from "@/config/fonts";
@@ -38,7 +37,6 @@ const customIcon = L.icon({
 const Map = () => {
   const router = useRouter();
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  
 
   const markers = [
     {
@@ -89,16 +87,14 @@ const Map = () => {
   ];
 
   useEffect(() => {
-    // Aquí puedes manejar efectos secundarios relacionados con el mapa si es necesario
     return () => {
-      // Limpiar el mapa si es necesario
+      //* Limpiar el mapa si es necesario
     };
   }, []);
 
-  const handleViewDetails = () => {
+  const handleViewDetails = (id: string) => {
     console.log("View Details");
-    router.push("/orders/details");
-    // closeModal();
+    router.push(`/orders/details/${id}`);
   };
 
   const handleAssign = () => {
@@ -112,6 +108,7 @@ const Map = () => {
         center={[51.505, -0.09]}
         zoom={13}
         style={{ height: "100vh", width: "100%" }}
+        zoomControl={false}
       >
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -126,14 +123,16 @@ const Map = () => {
             title={marker.info.orderId}
           >
             <Popup>
-              <p className={`text-[14px] text-gray-300 font-normal ${inter.className} antialiased`}>
+              <p
+                className={`text-[14px] text-gray-300 font-normal ${inter.className} antialiased`}
+              >
                 {marker.info.address}
               </p>
               <p className="text-[14px] text-[#2D3748]">{marker.info.place}</p>
               <div className="flex justify-center items-center gap-2.5">
                 <Button
                   className="px-4 rounded-[16px] w-[108px] bg-white text-[#FF7500] text-sm border border-[#FF7500] hover:bg-[#FF7500] hover:text-white"
-                  onClick={handleViewDetails}
+                  onClick={() => handleViewDetails(marker.info.orderId)}
                 >
                   View Details
                 </Button>
@@ -148,7 +147,7 @@ const Map = () => {
         ))}
       </MapContainer>
 
-      <AssignToMessenger open={modalIsOpen} setOpen={setModalIsOpen}/>
+      <AssignToMessenger open={modalIsOpen} setOpen={setModalIsOpen} />
     </>
   );
 };
