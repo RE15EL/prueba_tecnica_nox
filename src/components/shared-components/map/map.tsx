@@ -93,12 +93,10 @@ const Map = () => {
   }, []);
 
   const handleViewDetails = (id: string) => {
-    console.log("View Details");
     router.push(`/orders/details/${id}`);
   };
 
   const handleAssign = () => {
-    console.log("Assign");
     setModalIsOpen(true);
   };
 
