@@ -11,8 +11,8 @@ export const Navbar = () => {
   const [open, setOpen] = useState<boolean>(false);
 
   return (
-    <header className="w-full h-[p6px] bg-transparent flex justify-between items-center py-[24px] px-[80px]">
-      <div className={`${roboto.className} antialiased text-[32px]`}>
+    <header className="w-full h-[86px] bg-transparent flex justify-between items-center py-[24px] px-[80px]">
+      <div className={`text-[32px] font-bold`}>
         break<span className="text-[#C026D3]">io</span>
       </div>
 

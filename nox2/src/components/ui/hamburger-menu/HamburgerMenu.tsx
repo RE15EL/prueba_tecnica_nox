@@ -1,6 +1,5 @@
 import { NAVBAR_ACTIONS_ITEMS } from "@/app/lib/constants";
 import { Sheet, SheetContent } from "@/components/ui/sheet";
-import { ReactNode } from "react";
 import { ButtonSpecial } from "../button-special/ButtonSpecial";
 
 interface Props {
